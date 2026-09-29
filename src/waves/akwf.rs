@@ -2,7 +2,7 @@
 //! Kristoffer Ekstrand, <https://github.com/KristofferKarlAxelEkstrand/AKWF-FREE>.
 //!
 //! AKWF is released under CC0 1.0 (public domain); see `assets/waves/akwf/LICENSE.md`. No
-//! attribution is required, but it's credited here and in the README because it's deserved.
+//! attribution is required, but it's credited here and in docs/third-party.md because it's deserved.
 //!
 //! To add a wave: drop the `.wav` into `assets/waves/akwf/` and add a line below. Only append,
 //! since hosts save the waveform by its position in the catalog.
