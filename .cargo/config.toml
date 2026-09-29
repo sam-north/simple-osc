@@ -1,0 +1,9 @@
+[alias]
+xtask = "run --package xtask --release --"
+
+# Project-only compiler setting: let the compiler use AVX2 and FMA instructions (the x86-64-v3
+# level: Intel Haswell 2013+, AMD Excavator 2015+ and every Ryzen). Faster math in the audio and
+# GUI code. Builds made with this won't run on CPUs older than that; delete these lines to build
+# for any 64-bit x86 CPU.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-cpu=x86-64-v3"]

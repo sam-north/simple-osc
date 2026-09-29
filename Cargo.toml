@@ -1,0 +1,75 @@
+[package]
+name = "simple_osc"
+version = "0.1.0"
+edition = "2021"
+description = "A single-oscillator synth instrument (VST3 / CLAP / standalone)"
+license = "MIT OR Apache-2.0"
+authors = ["Sam North"]
+repository = "https://github.com/sam-north/simple-osc"
+readme = "README.md"
+
+[workspace]
+members = ["xtask"]
+
+[lib]
+# `cdylib` is the plugin binary loaded by hosts, `lib` lets the standalone binary link against it.
+crate-type = ["cdylib", "lib"]
+
+[[bin]]
+name = "simple_osc_standalone"
+path = "src/main.rs"
+
+[dependencies]
+# Pinned to a known commit so builds are reproducible. `assert_process_allocs` aborts debug builds
+# if the audio thread ever allocates memory; it has no effect in release builds.
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", rev = "de421011f41a6d10fc8c7a6084e4f4dee0143683", features = ["standalone", "assert_process_allocs"] }
+# Default features off to leave out egui's emoji fonts (see `src/ui/fonts.rs`).
+nih_plug_egui = { git = "https://github.com/robbert-vdh/nih-plug.git", rev = "de421011f41a6d10fc8c7a6084e4f4dee0143683", default-features = false, features = ["opengl"] }
+# The two text fonts the GUI uses. Only the fonts that are referenced end up in the binary.
+epaint_default_fonts = "=0.31.1"
+# Not used directly: this turns on a workaround in the copy nih_plug_egui uses so the window can
+# grab keyboard focus on Windows (https://github.com/BillyDM/egui-baseview/issues/20). The rev
+# must match nih_plug_egui's.
+egui-baseview = { git = "https://github.com/BillyDM/egui-baseview.git", rev = "ec70c3fe6b2f070dcacbc22924431edbe24bd1c0", default-features = false, features = ["windows_keyboard_workaround"] }
+# Themes, language packs and keymaps are TOML files.
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+# Only used by the standalone binary to auto-pick a MIDI input.
+midir = "0.9"
+
+[profile.release]
+# Maximum runtime speed: optimize across all crates as one unit (so small functions inline across
+# crate boundaries) and don't generate stack-unwinding code. A panic inside a plugin can't
+# safely unwind into the host anyway.
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
+
+[profile.profiling]
+inherits = "release"
+debug = true
+strip = "none"
+
+# Light optimization in debug builds keeps the DSP and the generated GUI texture fast enough to
+# use, while keeping the debug checks.
+[profile.dev]
+opt-level = 1
+
+# A patched copy of the egui <-> window glue: fixes letter keys vanishing with Shift/Caps Lock, skips
+# idle UI frames and leaves out the emoji fonts.
+# See vendor/egui-baseview/PATCHES.md.
+[patch."https://github.com/BillyDM/egui-baseview.git"]
+egui-baseview = { path = "vendor/egui-baseview" }
+
+# A patched copy of nih-plug's egui adapter so the GUI can idle. See vendor/nih_plug_egui/PATCHES.md.
+[patch."https://github.com/robbert-vdh/nih-plug.git"]
+nih_plug_egui = { path = "vendor/nih_plug_egui" }
+
+# Standalone only: fixes the window size and sets its icon (see `src/main.rs`).
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging", "Win32_System_LibraryLoader", "Win32_System_Threading"] }
+
+[build-dependencies]
+embed-resource = "3"

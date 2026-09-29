@@ -1,0 +1,159 @@
+# Vintage: 70s-90s professional gear. Black amp tolex, cream enamel face plates with brown
+# silkscreen, Moog-style skirted knobs, red chicken-head selectors and an amber phosphor scope.
+# Colors are "#rrggbb" or "#rrggbbaa".
+
+id = "vintage"
+name = "Vintage"
+
+[metrics]
+margin = 16.0
+header_height = 38.0
+scope_height = 182.0
+section_height = 150.0
+section_gap = 10.0
+section_padding = 8.0
+section_title_height = 24.0
+section_title_indent = 18.0
+keyboard_label_height = 30.0
+attachment_height = 26.0
+keyboard_octaves = 2
+
+[background]
+style = "tolex"
+base = "#151413"
+grain = "#242220"
+highlight = "#3a3733"
+
+[text]
+# Silkscreen on the cream panels
+muted = "#4a3f33"
+# Lettering printed straight on the tolex cabinet
+on_background = "#b8ae9c"
+label = { family = "monospace", size = 10.0 }
+value = { family = "monospace", size = 11.0 }
+section = { family = "monospace", size = 10.5 }
+section_spacing = 2.5
+hint = { family = "proportional", size = 11.0 }
+subtitle = { family = "monospace", size = 11.0 }
+subtitle_spacing = 2.5
+uppercase_labels = true
+uppercase_sections = true
+uppercase_title = true
+uppercase_info = true
+
+[title]
+font = { family = "proportional", size = 19.0 }
+color = "#1c1a18"
+spacing = 4.0
+effect = { style = "nameplate", top = "#e4e0d8", bottom = "#a9a49a", edge = "#4a4640", screw = "#8a857c" }
+
+# The "SS" logo: an S, then the same S on its side as a sine wave
+[logo]
+height = 24.0
+gap = 10.0
+letter = "#e9e4d8"
+wave = "#ffb347"
+
+[panel]
+style = "enamel_plate"
+top = "#ded4bd"
+bottom = "#cabfa5"
+edge = "#6e6352"
+silkscreen = "#8a7a62"
+screw = "#b3aea4"
+screw_slot = "#4a4640"
+
+[knobs]
+radius = 20.0
+sweep_degrees = 270.0
+endless_detents = 12
+top_margin = 15.0
+label_offset = 20.0
+value_offset = 14.0
+
+# Continuous controls: black knurled caps on aluminum skirts, with a printed scale
+[knobs.continuous]
+shape = "skirted"
+scale = { family = "monospace", size = 7.5 }
+body = "#151413"
+rim = "#bdb8ae"
+face = "#23211f"
+highlight = "#3d3a36"
+pointer = "#f2ede1"
+track = "#000000"
+arc = "#000000"
+arc_active = "#e0a040"
+marker = "#4a3f33"
+marker_active = "#b8321f"
+label = "#3a3128"
+value = "#2b241d"
+value_active = "#8a2a1a"
+shadow = "#00000070"
+
+# Selectors: oxblood red chicken-head pointers
+[knobs.selector]
+shape = "chicken_head"
+body = "#7a1f14"
+rim = "#3e0f09"
+face = "#5c160e"
+highlight = "#9a3322"
+pointer = "#f2ede1"
+track = "#000000"
+arc = "#000000"
+arc_active = "#ffd08a"
+marker = "#8a7a62"
+marker_active = "#d8402a"
+label = "#3a3128"
+value = "#8a2a1a"
+value_active = "#b8321f"
+shadow = "#00000070"
+
+# Left-to-right position switches, like the octave switch
+[switch]
+width = 88.0
+track = "#2b241d"
+track_edge = "#6e6352"
+thumb = "#e9e4d8"
+thumb_active = "#fffaf0"
+thumb_edge = "#3a3631"
+tick = "#6e6352"
+tick_active = "#8a2a1a"
+font = { family = "monospace", size = 8.5 }
+
+# Amber phosphor, like an old bench oscilloscope
+[scope]
+bezel = "panel"
+bezel_inset = 13.0
+glass = "#0e110c"
+glass_edge = "#00000080"
+inner_shadow = "#000000c8"
+grid = "#1e2a1c"
+grid_center = "#34462f"
+grid_columns = 10
+trace = "#ffb347"
+trace_width = 1.6
+glow = 0.9
+scanlines = "#00000030"
+info = "#ffb34799"
+note = "#ffcf7a"
+font = { family = "monospace", size = 10.5 }
+
+# Ivory and ebony keys
+[keyboard]
+panel = true
+white = "#efe7d4"
+black = "#161514"
+held = "#b8321f"
+sounding = "#ffb347"
+outline = "#00000030"
+label = "#7a6c58"
+black_label = "#8c8579"
+active_label = "#1c1a18"
+octave_label = "#9a8a72"
+font = { family = "monospace", size = 10.0 }
+corner_radius = 2.0
+
+[switcher]
+text = "#8c8579"
+hover = "#ffb347"
+font = { family = "monospace", size = 9.5 }

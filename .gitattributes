@@ -1,0 +1,5 @@
+# Store text with LF line endings in the repo; Git converts to the platform's style on checkout.
+* text=auto
+
+# Waveform samples are binary data, never text
+*.wav binary

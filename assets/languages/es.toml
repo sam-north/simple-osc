@@ -1,0 +1,81 @@
+# Español
+
+id = "es"
+name = "Español"
+short_name = "ES"
+
+[number]
+decimal_separator = ","
+
+[notes]
+names = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"]
+# Middle C (MIDI 60) is Do3
+octave_offset = -2
+
+[strings]
+"app.title" = "Simple Osc"
+"app.subtitle" = "Sinte Mono // Unidad 01"
+
+"section.oscillator" = "Oscilador"
+"section.filter" = "Filtro"
+"section.envelope" = "Envolvente"
+"section.output" = "Salida"
+
+"control.wave" = "Onda"
+"control.octave" = "Octava"
+"control.coarse" = "Tono"
+"control.fine" = "Fino"
+"control.type" = "Tipo"
+"control.cutoff" = "Corte"
+"control.reso" = "Reso"
+"control.attack" = "Ataque"
+"control.decay" = "Caída"
+"control.sustain" = "Sostén"
+"control.release" = "Liberación"
+"control.volume" = "Volumen"
+
+"choice.filter.lowpass" = "Paso bajo"
+"choice.filter.highpass" = "Paso alto"
+"choice.filter.bandpass" = "Paso banda"
+"choice.filter.notch" = "Rechazo"
+
+"unit.hz" = " Hz"
+"unit.khz" = " kHz"
+"unit.ms" = " ms"
+"unit.s" = " s"
+"unit.semitones" = " st"
+"unit.cents" = " ct"
+"unit.db" = " dB"
+"unit.percent" = " %"
+
+"keyboard.title" = "Teclado"
+"keyboard.hint" = "haz clic en la ventana y toca con el teclado del ordenador"
+
+"scope.info" = "{category} / {wave}   //   {filter} {cutoff}"
+"scope.note" = "{note}   {frequency} Hz"
+
+"switcher.theme" = "Tema: {name} (clic: siguiente, clic derecho: anterior)"
+"switcher.language" = "Idioma: {name} (clic: siguiente, clic derecho: anterior)"
+
+"control.shape" = "Forma"
+"shape.width" = "Ancho"
+"shape.detune" = "Desafine"
+"shape.color" = "Color"
+"shape.amount" = "Cantidad"
+"shape.fold" = "Plegado"
+"value.inactive" = "—"
+
+"category.basic" = "Básico"
+"category.akwf" = "Adventure Kid"
+"wave.tooltip" = "{category} / {wave}\nArrastra, desplaza o haz clic para cambiar · clic derecho: anterior"
+
+"wave.sine" = "Seno"
+"wave.triangle" = "Triángulo"
+"wave.saw" = "Sierra"
+"wave.square" = "Cuadrada"
+"wave.pulse" = "Pulso"
+"wave.supersaw" = "Supersierra"
+"wave.noise" = "Ruido"
+"wave.phase_dist" = "Dist. fase"
+"wave.fold" = "Plegado"
+"endless.tooltip" = "{value}\nArrastra, desplaza o haz clic para cambiar · clic derecho: anterior"

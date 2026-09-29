@@ -1,0 +1,81 @@
+# Français
+
+id = "fr"
+name = "Français"
+short_name = "FR"
+
+[number]
+decimal_separator = ","
+
+[notes]
+names = ["Do", "Do#", "Ré", "Ré#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"]
+# Middle C (MIDI 60) is Do3
+octave_offset = -2
+
+[strings]
+"app.title" = "Simple Osc"
+"app.subtitle" = "Synthé Mono // Unité 01"
+
+"section.oscillator" = "Oscillateur"
+"section.filter" = "Filtre"
+"section.envelope" = "Enveloppe"
+"section.output" = "Sortie"
+
+"control.wave" = "Onde"
+"control.octave" = "Octave"
+"control.coarse" = "Grossier"
+"control.fine" = "Fin"
+"control.type" = "Type"
+"control.cutoff" = "Coupure"
+"control.reso" = "Réso"
+"control.attack" = "Attaque"
+"control.decay" = "Déclin"
+"control.sustain" = "Maintien"
+"control.release" = "Relâche"
+"control.volume" = "Volume"
+
+"choice.filter.lowpass" = "Passe-bas"
+"choice.filter.highpass" = "Passe-haut"
+"choice.filter.bandpass" = "Passe-bande"
+"choice.filter.notch" = "Coupe-bande"
+
+"unit.hz" = " Hz"
+"unit.khz" = " kHz"
+"unit.ms" = " ms"
+"unit.s" = " s"
+"unit.semitones" = " dt"
+"unit.cents" = " ct"
+"unit.db" = " dB"
+"unit.percent" = " %"
+
+"keyboard.title" = "Clavier"
+"keyboard.hint" = "cliquez sur la fenêtre, puis jouez avec le clavier de l'ordinateur"
+
+"scope.info" = "{category} / {wave}   //   {filter} {cutoff}"
+"scope.note" = "{note}   {frequency} Hz"
+
+"switcher.theme" = "Thème : {name} (clic : suivant, clic droit : précédent)"
+"switcher.language" = "Langue : {name} (clic : suivant, clic droit : précédent)"
+
+"control.shape" = "Forme"
+"shape.width" = "Largeur"
+"shape.detune" = "Désaccord"
+"shape.color" = "Couleur"
+"shape.amount" = "Quantité"
+"shape.fold" = "Repli"
+"value.inactive" = "—"
+
+"category.basic" = "Basique"
+"category.akwf" = "Adventure Kid"
+"wave.tooltip" = "{category} / {wave}\nGlissez, défilez ou cliquez pour changer · clic droit : précédent"
+
+"wave.sine" = "Sinus"
+"wave.triangle" = "Triangle"
+"wave.saw" = "Scie"
+"wave.square" = "Carré"
+"wave.pulse" = "Impulsion"
+"wave.supersaw" = "Super scie"
+"wave.noise" = "Bruit"
+"wave.phase_dist" = "Dist. phase"
+"wave.fold" = "Repli"
+"endless.tooltip" = "{value}\nGlissez, défilez ou cliquez pour changer · clic droit : précédent"

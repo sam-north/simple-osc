@@ -1,0 +1,25 @@
+# Computer-keyboard note layout (Ableton/FL style) for QWERTY keyboards.
+# Key names are egui key names: "A".."Z", "Num0".."Num9", "Comma", "Semicolon", ...
+
+id = "qwerty"
+# MIDI note played by semitone 0 (60 = middle C). Use the octave switch to play higher or lower.
+base_note = 60
+
+notes = [
+    { key = "A", semitone = 0 },
+    { key = "W", semitone = 1 },
+    { key = "S", semitone = 2 },
+    { key = "E", semitone = 3 },
+    { key = "D", semitone = 4 },
+    { key = "F", semitone = 5 },
+    { key = "T", semitone = 6 },
+    { key = "G", semitone = 7 },
+    { key = "Y", semitone = 8 },
+    { key = "H", semitone = 9 },
+    { key = "U", semitone = 10 },
+    { key = "J", semitone = 11 },
+    { key = "K", semitone = 12 },
+    { key = "O", semitone = 13 },
+    { key = "L", semitone = 14 },
+    { key = "P", semitone = 15 },
+]

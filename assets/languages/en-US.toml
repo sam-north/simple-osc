@@ -1,0 +1,83 @@
+# English (US) — the default language. Other packs fall back to this one for missing keys.
+# Units include their leading space, since spacing rules differ between languages.
+
+id = "en-US"
+name = "English (US)"
+short_name = "EN"
+
+[number]
+decimal_separator = "."
+
+[notes]
+names = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+# Middle C (MIDI 60) is C4
+octave_offset = -1
+
+[strings]
+"app.title" = "Simple Osc"
+"app.subtitle" = "Mono Synth // Unit 01"
+
+"section.oscillator" = "Oscillator"
+"section.filter" = "Filter"
+"section.envelope" = "Envelope"
+"section.output" = "Out"
+
+"control.wave" = "Wave"
+"control.octave" = "Octave"
+"control.coarse" = "Coarse"
+"control.fine" = "Fine"
+"control.type" = "Type"
+"control.cutoff" = "Cutoff"
+"control.reso" = "Reso"
+"control.attack" = "Attack"
+"control.decay" = "Decay"
+"control.sustain" = "Sustain"
+"control.release" = "Release"
+"control.volume" = "Volume"
+
+"choice.filter.lowpass" = "Low Pass"
+"choice.filter.highpass" = "High Pass"
+"choice.filter.bandpass" = "Band Pass"
+"choice.filter.notch" = "Notch"
+
+"unit.hz" = " Hz"
+"unit.khz" = " kHz"
+"unit.ms" = " ms"
+"unit.s" = " s"
+"unit.semitones" = " st"
+"unit.cents" = " ct"
+"unit.db" = " dB"
+"unit.percent" = "%"
+
+"keyboard.title" = "Keyboard"
+"keyboard.hint" = "click the window, then play with the computer keys"
+
+"scope.info" = "{category} / {wave}   //   {filter} {cutoff}"
+"scope.note" = "{note}   {frequency} Hz"
+
+"switcher.theme" = "Theme: {name} (click for next, right-click for previous)"
+"switcher.language" = "Language: {name} (click for next, right-click for previous)"
+
+"control.shape" = "Shape"
+"shape.width" = "Width"
+"shape.detune" = "Detune"
+"shape.color" = "Color"
+"shape.amount" = "Amount"
+"shape.fold" = "Fold"
+"value.inactive" = "—"
+
+"category.basic" = "Basic"
+"category.akwf" = "Adventure Kid"
+"wave.tooltip" = "{category} / {wave}\nDrag, scroll or click to change · right-click goes back"
+
+"wave.sine" = "Sine"
+"wave.triangle" = "Triangle"
+"wave.saw" = "Saw"
+"wave.square" = "Square"
+"wave.pulse" = "Pulse"
+"wave.supersaw" = "Supersaw"
+"wave.noise" = "Noise"
+"wave.phase_dist" = "Phase Dist"
+"wave.fold" = "Fold"
+# Adventure Kid waves use their built-in English names unless a "wave.akwf_*" key is given here.
+"endless.tooltip" = "{value}\nDrag, scroll or click to change · right-click goes back"

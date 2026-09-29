@@ -1,0 +1,164 @@
+# Grunge: rusted, pitted iron with verdigris patina.
+# Colors are "#rrggbb" or "#rrggbbaa". Copy this file into the user themes folder, change `id`
+# and `name`, and edit anything below to make a new theme.
+
+id = "grunge"
+name = "Grunge"
+
+[metrics]
+margin = 16.0
+header_height = 38.0
+scope_height = 182.0
+section_height = 150.0
+section_gap = 10.0
+section_padding = 8.0
+section_title_height = 24.0
+section_title_indent = 18.0
+keyboard_label_height = 30.0
+attachment_height = 26.0
+keyboard_octaves = 2
+
+[background]
+style = "rusted_metal"
+tint = "#5c5c5c"
+
+[background.palette]
+iron = "#1e1612"
+rust = "#683218"
+rust_bright = "#9e4e22"
+stain = "#462212"
+patina_dark = "#24463c"
+patina_light = "#5c8e78"
+scratch = "#c8b89a"
+
+[text]
+muted = "#aea086"
+shadow = "#000000d2"
+label = { family = "monospace", size = 10.0 }
+value = { family = "monospace", size = 11.0 }
+section = { family = "monospace", size = 10.5 }
+section_spacing = 2.5
+hint = { family = "proportional", size = 11.0 }
+subtitle = { family = "monospace", size = 11.0 }
+subtitle_spacing = 2.0
+uppercase_labels = true
+uppercase_sections = true
+uppercase_title = true
+uppercase_info = true
+
+[title]
+font = { family = "monospace", size = 26.0 }
+color = "#e3d6b8"
+spacing = 5.0
+effect = { style = "distressed", color = "#1a1310d9" }
+
+# The "SS" logo: an S, then the same S on its side as a sine wave
+[logo]
+height = 26.0
+gap = 10.0
+letter = "#e3d6b8"
+wave = "#9be3c0"
+
+[panel]
+style = "riveted_plate"
+tint = "#968c84"
+shade = "#00000037"
+bevel_light = "#e3d6b828"
+bevel_dark = "#000000aa"
+rivet = "#5c4739"
+rivet_highlight = "#8f745c"
+
+[knobs]
+radius = 21.0
+sweep_degrees = 270.0
+endless_detents = 12
+top_margin = 10.0
+label_offset = 17.0
+value_offset = 15.0
+
+# Continuous controls: dark knurled iron with a rust-orange value arc
+[knobs.continuous]
+shape = "iron"
+body = "#1c1612"
+rim = "#332923"
+face = "#483a30"
+highlight = "#5a493db3"
+pointer = "#e3d6b8"
+track = "#140e0b"
+arc = "#d86a2c"
+arc_active = "#f28c40"
+marker = "#3b4f47"
+marker_active = "#a4ecca"
+speckle = "#a04c206e"
+label = "#aea086"
+value = "#e3d6b8"
+value_active = "#f28c40"
+shadow = "#00000096"
+
+# Selectors: verdigris-covered hex bolts
+[knobs.selector]
+shape = "hex_bolt"
+body = "#3f7a66"
+rim = "#22463b"
+face = "#4b8c76"
+highlight = "#589d85"
+pointer = "#e3d6b8"
+track = "#140e0b"
+arc = "#6cbd9f"
+arc_active = "#a4ecca"
+marker = "#3b4f47"
+marker_active = "#a4ecca"
+speckle = "#b8e6d046"
+speckle_alt = "#9a4a2296"
+label = "#6cbd9f"
+value = "#6cbd9f"
+value_active = "#a4ecca"
+shadow = "#00000096"
+
+# Left-to-right position switches, like the octave switch
+[switch]
+width = 88.0
+track = "#140e0b"
+track_edge = "#5c4739"
+thumb = "#c9bb9a"
+thumb_active = "#e3d6b8"
+thumb_edge = "#3a2a1e"
+tick = "#7a6a58"
+tick_active = "#f28c40"
+font = { family = "monospace", size = 8.5 }
+
+[scope]
+bezel = "panel"
+bezel_inset = 14.0
+glass = "#0a100e"
+glass_edge = "#e3d6b81e"
+inner_shadow = "#000000be"
+grid = "#192923"
+grid_center = "#2b463c"
+grid_columns = 10
+trace = "#9be3c0"
+trace_width = 1.6
+glow = 1.0
+scanlines = "#00000028"
+info = "#9be3c08c"
+note = "#9be3c0"
+font = { family = "monospace", size = 10.5 }
+
+[keyboard]
+panel = true
+white = "#c9bb9a"
+black = "#1e1814"
+held = "#6cbd9f"
+sounding = "#d86a2c"
+grime = "#6a482a37"
+label = "#4e4236"
+black_label = "#7a705e"
+active_label = "#2a1c12"
+octave_label = "#7a6a58"
+font = { family = "monospace", size = 10.0 }
+corner_radius = 2.0
+
+[switcher]
+text = "#aea086"
+hover = "#f28c40"
+font = { family = "monospace", size = 9.5 }
